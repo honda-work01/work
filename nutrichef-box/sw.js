@@ -73,6 +73,6 @@ self.addEventListener('activate', event => {
                 })
             );
         })
-        .then(() => clients.claim())
+            .then(() => clients.claim())
     );
 });

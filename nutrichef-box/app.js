@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {string} lang - The language code to set.
      */
     async function setLanguage(lang) {
-        currentLanguage = lang;
         translations = loadTranslations(lang);
         document.documentElement.lang = lang;
         languageSwitcher.value = lang;

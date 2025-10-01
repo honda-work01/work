@@ -43,3 +43,5 @@ npm start
 ## 今後の展望
 
 現在は開発モードでの起動ですが、将来的には`Electron`のパッケージング機能を利用して、`Windows`の`.exe`ファイルや`macOS`の`.app`ファイルのように、`npm`コマンドなしで直接起動できる単一の実行ファイルとして配布することも可能です。
+
+<!-- Test commit for remote URL update -->

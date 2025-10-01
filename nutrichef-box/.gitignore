@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Electron
+*.asar
+*.asar.unpacked
+
+# Build output
+dist/
+out/
+
+# Local environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# IDEs and other tools
+.vscode/
+.idea/

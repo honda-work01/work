@@ -1,0 +1,14 @@
+{
+  "name": "nutrichef-box",
+  "version": "1.0.0",
+  "description": "Manage recipes, inventory, and shopping lists with nutrition calculation.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

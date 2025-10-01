@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="appName">NutriChef Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1 data-i18n="appName">NutriChef Box</h1>
+        <div class="language-selector">
+            <select id="language-switcher">
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <button id="recipes-tab" data-i18n="tabRecipes">Recipes</button>
+            <button id="inventory-tab" data-i18n="tabInventory">Inventory</button>
+            <button id="shopping-list-tab" data-i18n="tabShoppingList">Shopping List</button>
+            <button id="nutrition-graph-tab" data-i18n="tabNutritionGraph">Nutrition Graph</button>
+        </nav>
+
+        <section id="recipes-section">
+            <button id="add-recipe-btn" class="primary-btn" data-i18n="addRecipeButton">Add Recipe</button>
+            <div id="recipe-list"></div>
+        </section>
+
+        <section id="inventory-section" class="hidden-tab">
+            <button id="add-inventory-btn" class="primary-btn" data-i18n="addInventoryButton">Add to Inventory</button>
+            <div id="inventory-list"></div>
+        </section>
+
+        <section id="shopping-list-section" class="hidden-tab">
+            <h2 data-i18n="shoppingListTitle">Shopping List</h2>
+            <div id="shopping-list-content"></div>
+        </section>
+
+        <section id="nutrition-graph-section" class="hidden-tab">
+            <h2 data-i18n="nutritionGraphTitle">Nutrition Graph</h2>
+            <canvas id="nutrition-chart"></canvas>
+        </section>
+    </main>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <h3 id="modal-title"></h3>
+            <form id="modal-form"></form>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <footer>
+        <p>&copy; 2024 NutriChef Box</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    <!-- Service Worker registration commented out for development stability -->
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').then(reg => {
+                    console.log('Service Worker registered.', reg);
+                }).catch(err => {
+                    console.error('Service Worker registration failed:', err);
+                });
+            });
+        }
+    </script> -->
+</body>
+</html>

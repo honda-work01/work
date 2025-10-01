@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const toastElement = document.getElementById('toast');
 
     let db;
-    let currentLanguage = 'ja';
     let translations = {};
     let nutritionChart; // Chart.js instance
 
@@ -528,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillStyle = '#aaa';
-                ctx.font = "16px 'Roboto', 'Noto Sans JP', sans-serif";
+                ctx.font = '16px \'Roboto\', \'Noto Sans JP\', sans-serif';
                 ctx.fillText(t('graphEmptyMessage'), nutritionChartCanvas.width / 2, nutritionChartCanvas.height / 2);
                 ctx.restore();
                 return;

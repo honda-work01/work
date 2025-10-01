@@ -9,7 +9,7 @@ const urlsToCache = [
     './locales/ja.json',
     './icon-192x192.png',
     './icon-512x512.png',
-    'https://cdn.jsdelivr.net/npm/chart.js', // Still caching the CDN URL as a fallback
+    'https://cdn.jsdelivr.net/npm/chart.js',
     'https://cdn.jsdelivr.net/npm/marked/marked.min.js'
 ];
 
@@ -21,7 +21,7 @@ self.addEventListener('install', event => {
                 console.log('Opened cache');
                 return cache.addAll(urlsToCache);
             })
-            .then(() => self.skipWaiting()) // Force activation
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -73,6 +73,6 @@ self.addEventListener('activate', event => {
                 })
             );
         })
-        .then(() => clients.claim()) // Take control of open clients
+        .then(() => clients.claim())
     );
 });

@@ -26,5 +26,10 @@
             "error",
             "always"
         ]
+    },
+    "globals": {
+        "marked": "readonly",
+        "Chart": "readonly",
+        "clients": "readonly" // For Service Worker
     }
 }
